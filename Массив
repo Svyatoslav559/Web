@@ -1,0 +1,26 @@
+let a=0;
+let massiv = [];
+do
+{
+a = prompt('Введите элемент массива');
+if(a){
+massiv.push(+a);
+}
+} while(a)
+for (let i = 0, ii = massiv.length - 1; i < ii; i++){
+for (let j = 0, jj = massiv.length - i - 1; j < jj; j++){
+if(massiv[j] > massiv[j + 1]){
+let a = massiv[j];
+massiv[j] = massiv[j+1];
+massiv[j+1]  = a;
+}
+}
+}
+console.log(massiv);
+console.log("Минимальный: "+ massiv[0]);
+console.log("Максимальный: "+ massiv[massiv.length - 1]);
+let s = 0;
+for (let i = 0; i < massiv.length; i++){
+s += massiv[i];
+}
+console.log("Сумма: "+ s);
