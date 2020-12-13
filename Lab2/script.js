@@ -1,9 +1,9 @@
 class Student{
-	constructor(name, producer, strength, count){
+	constructor(name, surname, age, ball){
 		this.name = name;
-		this.producer = producer;
-		this.strength = strength;
-		this.count = count;
+		this.surname = surname;
+		this.age = age;
+		this.ball = ball;
 
 		var isAvailable = function(){
 			if(count > 0)
@@ -56,9 +56,9 @@ function printHead(table){
 	tr = document.createElement("tr");
 	tr.setAttribute("id", "trHead");
 	addTh(tr, "thName", "Имя");
-	addTh(tr, "thProducer", "Фамилия");
-	addTh(tr, "thStrength", "Возраст");
-	addTh(tr, "thCount", "Средний бал");
+	addTh(tr, "thSurname", "Фамилия");
+	addTh(tr, "thAge", "Возраст");
+	addTh(tr, "thBall", "Средний бал");
 	table.appendChild(tr);
 }
 
@@ -67,9 +67,9 @@ function printString(table, item){
 	tr = document.createElement("tr");
 	tr.setAttribute("class", "tr");
 	addTd(tr, "tdName", item.name);
-	addTd(tr, "tdProducer", item.producer);
-	addTd(tr, "tdStrength", item.strength);
-	addTd(tr, "tdCount", item.count);
+	addTd(tr, "tdSurname", item.producer);
+	addTd(tr, "tdAge", item.strength);
+	addTd(tr, "tdBall", item.count);
 	table.appendChild(tr);
 }
 
@@ -95,7 +95,7 @@ function printAverage(){
 
 function check(Student) {
     console.log(Student.getCount());
-    console.log(Student.sellVodka());
+    console.log(Student.sellStudent());
     console.log(Student.getCount());
 }
 
