@@ -1,0 +1,50 @@
+<html ng-app="studentApp">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>JavaScript-5</title>
+    <style>
+        input {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    </style>
+</head>
+
+<body ng-controller="StudentController">
+    <div id="main">
+        <table>
+            <tr>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>Возраст</th>
+                <th>Средний бал</th>
+            </tr>
+            <tr ng-repeat="student in studentArray">
+                <td>{{student.name}}</td>
+                <td>{{student.surname}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.ball}}</td>
+                <td><button ng-click="deletestudent(student)">Удалить</button></td>
+            </tr>
+        </table>
+    </div>
+    <div id="average">
+        Средний балл: {{avgCnt}}
+    </div>
+    <div id="fields">
+        Имя: <input type="text" ng-model="student.name">
+        <br>
+        Фамилия: <input type="text" ng-model="student.surname">
+        <br>
+        Возраст: <input type="text" ng-model="student.age">
+        <br>
+        Средний балл: <input type="text" ng-model="student.ball">
+        <br>
+        <input type="button" value="Добавить" ng-click="addstudent(student)">
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
